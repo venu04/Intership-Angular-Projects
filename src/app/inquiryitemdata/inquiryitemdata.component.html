@@ -1,0 +1,94 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<br>
+
+<mat-form-field class="example-full-width" style="    position: absolute;left:964;margin-left: 707px;top:100px">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [(ngModel)]="userMail"  #ctrl="ngModel" placeholder="Ex. pat@example.com" >
+    
+    </mat-form-field>
+    <a (click)="sendmail()" class="fa fa-send fa-2x" style="position: relative;
+    left: 894px;
+    top: 38px;" ></a>
+    
+
+
+
+<div class="container bootstrap snippets bootdeys">
+<div class="row" style="margin-top: 80px;">
+  <div class="col-sm-12" style="padding-left: 123px;
+  PADDING-RIGHT: 163PX;">
+	  	<div class="panel panel-default invoice" id="invoice" >
+		  <div class="panel-body tbox" style="padding-left: 25px;
+          padding-right: 25px;
+		  padding-top: 25px;margin-left: 20px;
+		  border-radius: 1rem;
+		  box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);height: 360px;">
+		    <div class="row" style="height: 80px;">
+
+				<div class="col-sm-3 top-left">
+                        <img src="../../assets/Kaar.png" style = "position:relative; left:12px; top:-12px;width: 90px;"alt="Admin" class="rounded-circle" width="125">
+				</div>
+				<h2 style="margin-left: 35px;padding-top: 15px;color: #ec171b;margin-left: 129px;">INQUIRY</h2>
+				<div class="col-sm-4 top-right" style="margin-left: 18px;">
+						<h3 class="marginright"><b>DOC.NO. {{DOC_NUMBER}}</b></h3>
+						<span class="marginright">{{date}}</span>
+			    </div>
+
+			</div>
+            
+			<div class="row table-row">
+				<table class="table table-striped">
+			      <thead>
+			        <tr>
+			          <th class="text-center" style="width:5%">#</th>
+			          <th style="width:2%;padding-left: 30px;">Material</th>
+					  <th class="text-right" style="width: 18%">Short Text</th>
+                      <th class="text-right" style="width:18%">Currency Type</th>
+                      <th class="text-right" style="width:18%">Unit of Weight</th>
+                      <th class="text-right" style="width:11%">Net Price</th>
+                      <th class="text-right" style="width:11%">Quantity</th>
+			          <th class="text-right" style="width:26%">Net Value</th>
+			        </tr>
+			      </thead>
+			      <tbody >
+			        <tr>
+			          <td class="text-center">1</td>  
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+			          <td style="padding-left: 50px;">{{MATERIAL}}</td>
+					  <td class="text-right">{{SHORT_TEXT}}</td>
+                      <td class="text-center">{{CURRENCY}}</td>
+                      <td class="text-center">{{UNIT_OF_WT}}</td>
+                      
+                      <td class="text-right">{{NET_PRICE}}</td>
+                      <td class="text-right">{{REQ_QTY}}</td>
+                      
+			          <td class="text-right">{{NET_VALUE}}</td>
+			        </tr>
+			        
+			       </tbody>
+			    </table>
+
+			</div>
+
+			<div class="row">
+			<div class="col-xs-6 margintop" style="padding-left: 17px;padding-top: 14px;">
+                <p class="lead marginbottom" style="margin-left: 320px;">THANK YOU!</p>
+                <button (click)="download()" class="btn btn-primary orangebutton downloadbutton"  style="background: #FFA700;margin-left: 305px;"><i class="fa fa-download" aria-hidden="true"></i> Download PDF</button>
+				
+			</div>
+			<div class="col-xs-6 text-right pull-right invoice-total" style="width: 610px;">
+			</div>
+			</div>
+
+		  </div>
+		</div>
+	</div>
+</div>
+</div>
+<br><br>

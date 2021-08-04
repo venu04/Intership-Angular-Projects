@@ -1,0 +1,26 @@
+<h2 style="margin-bottom: 24px;margin-top: 10px;margin-left: -13px;">PAYSLIP</h2>
+  <mat-form-field class="example-full-width" style="    position: absolute;
+  left: 1006px;
+  top: 130px;
+  left: 230px;">
+  <mat-label>Email</mat-label>
+  <input type="email" matInput [(ngModel)]="userMail"  #ctrl="ngModel" placeholder="Ex. pat@example.com" >
+  
+</mat-form-field>
+<a (click)="sendmail()" class="fa fa-send fa-2x" style="position: relative;
+left: 335px;
+top: 3px;" ></a>
+<button (click)="download()" class="btn btn-primary orangebutton downloadbutton"  style="background: #FFA700;
+margin-left: 796px;
+height: 44px;
+margin-top: -10px;
+margin-bottom: 0px;"><i class="fa fa-download" aria-hidden="true"></i> Download PDF</button>
+  <div class="body" *ngFor="let i of payslipdata" style="width: 1190px;
+  margin-left: 150px;
+  margin-right: 200px;
+  margin-top: 46px;">
+        <embed width="70%" height="925px" type="application/pdf" [src]="'data:application/pdf;base64,'+i.arr|paypdfview"/>
+  <br>
+  </div>
+
+  <br><br><br><br><br><br>

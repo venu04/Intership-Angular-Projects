@@ -1,0 +1,155 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<br><br>
+<mat-form-field>
+    <mat-label>Invoice No.</mat-label>
+    <mat-select name="my-select" [(ngModel)]="mySelect" (selectionChange)="selectChange()">
+        <mat-option [(value)]="item.VBELN" *ngFor="let item of inquirydat">
+            {{item.VBELN}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field class="example-full-width" style="    position: absolute;left:964;margin-left: 707px;">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [(ngModel)]="userMail"  #ctrl="ngModel" placeholder="Ex. pat@example.com" >
+    
+    </mat-form-field>
+    <a (click)="sendmail()" class="fa fa-send fa-2x" style="position: relative;
+    left: 894px;
+    top: 6px;" ></a>
+    
+
+
+
+
+
+
+<div class="page-content container tbox" id="invoice" style="padding-top: 10px;border-radius: 1rem;
+box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);margin-bottom: 70px;width: 830px;
+    height: 533px;">
+    <div class="page-header text-blue-d2">
+        <h1 class="page-title text-secondary-d1">
+            Invoice
+            <small class="page-info">
+                <i class="fa fa-angle-double-right text-80"></i>
+                ID: #{{invid}}
+            </small>
+        </h1>
+
+        <div class="page-tools">
+            <div class="action-buttons">
+                <img src="../../assets/Kaar.png" style = "position:relative; left:-15px; top:-6px;width: 68px;"alt="Admin" class="rounded-circle" width="125">
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-0">
+        <div class="row mt-1">
+            <div class="col-12 col-lg-10 offset-lg-1">
+               
+                <!-- .row -->
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div>
+                            <span class="text-sm text-grey-m2 align-middle">To: </span>
+                            <span class="text-sm  align-middle" style="color: #007bff;">Venu</span>
+                        </div>
+                        <div class="text-grey-m2">
+                            <div class="my-1">
+                                Street, City
+                            </div>
+                            <div class="my-1">
+                                State, Country
+                            </div>
+                            <div class="my-1"><i class="fa fa-phone fa-flip-horizontal text-secondary"></i> <b class="text-600">+91 (44) 4065 1500</b></div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="text-95 col-sm-6 align-self-start d-sm-flex justify-content-end">
+                        <hr class="d-sm-none" />
+                        <div class="text-grey-m2">
+                            <div class="mt-1 mb-2 text-secondary-m1 text-600 text-125">
+                                Invoice
+                            </div>
+
+                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">ID:</span> #{{invid}}</div>
+
+                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Issue Date:</span> {{date}}</div>
+
+                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Status:</span> <span class="badge badge-warning badge-pill px-25">Unpaid</span></div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+
+                <div class="mt-1">
+                    <div class="row text-600 text-white bgc-default-tp1 py-25">
+                        <div class="d-none d-sm-block col-1">#</div>
+                        <div class="col-9 col-sm-5" style="padding-left: 75px;">Description</div>
+                        <div class="d-none d-sm-block col-sm-2" style="padding-left: 0px;padding-right: 25px;">Currency Type</div>
+                        <div class="col-2" style="padding-left: 145px;">Amount</div>
+                    </div>
+
+                    <div class="text-95 text-secondary-d3">
+                        <div class="row mb-2 mb-sm-0 py-25">
+                            <div class="d-none d-sm-block col-1">1</div>
+                            <div class="col-9 col-sm-5" style="padding-left: 75px;">{{item}}</div>
+                            <div class="d-none d-sm-block col-2 text-95">{{ctype}}</div>
+                            <div class="col-2 text-secondary-d2" style="padding-left: 145px;">{{price}}</div>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="row border-b-2 brc-default-l2"></div>
+
+               
+
+                    <div class="row mt-1.5">
+                        <div class="col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0">
+                            Extra note such as company or payment information...
+                        </div>
+
+                        <div class="col-12 col-sm-5 text-grey text-90 order-first order-sm-last">
+                            <div class="row my-2">
+                                <div class="col-7 text-right">
+                                    SubTotal
+                                </div>
+                                <div class="col-5">
+                                    <span class="text-120 text-secondary-d1">{{price}}</span>
+                                </div>
+                            </div>
+
+
+                            <div class="row my-2 align-items-center bgc-primary-l3 p-2">
+                                <div class="col-7 text-right">
+                                    Total Amount
+                                </div>
+                                <div class="col-5">
+                                    <span class="text-150 text-success-d3 opacity-2">{{price}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="    margin-bottom: 5px;
+                    margin-top: 5px;"/>
+
+                    <div>
+                        <h3 style="text-align: center; margin-bottom: 5px;">Thank you for your business</h3>
+                        <div style="text-align: center;"><button style="border-radius: 1rem;margin-left: 2px;
+                            
+                            box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);margin-bottom: 0px;
+    margin-top: 0px;" (click)="download()" class="btn btn-primary orangebutton" >Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>

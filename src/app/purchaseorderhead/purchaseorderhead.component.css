@@ -1,0 +1,60 @@
+/* Structure */
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    
+  }
+  
+  .hide{
+  display: none;
+  }
+  mat-footer-row mat-footer-cell{
+  justify-content: center;
+  font-style:italic;
+  }
+  
+  
+  .orangebutton{
+  
+  color: white;
+  background: #ec171b;
+  border-radius: 40px;
+  outline: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  width: 160px;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #FFA700;
+  padding: 12px 20px;
+  border: none;
+  }
+  
+  h2{
+  text-align: center;
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color:#FFA700;
+  padding-top: 16px;
+  }
+  .loader{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:#FFA700;
+    padding-top: 16px;
+    }
+  
+  .tbox{
+    box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  }
+
+  tr:hover{
+    cursor: pointer;
+    }

@@ -1,0 +1,38 @@
+<main id="main" class="customcenter" style="margin-top: 105px;height: 391px;">
+	<section id="left">
+		<div id="head">
+			<h1>Life has great moments</h1>
+			<p>Enjoy them with KAAR!</p>
+		</div>
+		<h3>Enjoy Your Leave</h3>
+	</section>
+	<section id="right">
+        <h1>Create Leave Request</h1>
+        <div class="form">
+			<div id="form-card" class="form-field">
+				<label for="cc-number">Employee ID: {{emp_id}}</label>
+            </div>
+            <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Start date" [(ngModel)]="emp_fday">
+                      <input matEndDate placeholder="End date" [(ngModel)]="emp_lday">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field>
+            <div id="form-sec-code" class="form-field">
+                    <label for="sec-code">ABSENCE TYPE:</label>
+                    <input type="text" class="input" placeholder="1004" [(ngModel)]="abstype" required>
+            </div>
+
+			<div id="form-sec-code" class="form-field">
+				<label for="sec-code">HOURS:</label>
+				<input type="text" class="input"  placeholder="1,00" [(ngModel)]="hrs" required>
+			</div>
+			
+			<button (click)="getData()" type="submit">Create</button>
+        
+    </div>
+	</section>
+</main>

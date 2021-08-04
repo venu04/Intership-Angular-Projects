@@ -1,0 +1,56 @@
+<h2 style="margin-bottom: 0px;margin-top: 10px;margin-left: -13px;">PAYMENTS OVERDUES</h2>
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput [(ngModel)]="searchText" placeholder="Ex. ium" #input>
+</mat-form-field>
+
+<mat-form-field class="example-full-width" style="    position: absolute;left:964;margin-left: 707px;">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [(ngModel)]="userMail"  #ctrl="ngModel" placeholder="Ex. pat@example.com" >
+    
+    </mat-form-field>
+    <a (click)="sendmail()" class="fa fa-send fa-2x" style="position: relative;
+    left: 894px;
+    top: 6px;" ></a>
+
+
+<div>
+<table style="box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);" class="table table-bordered tbox" id="exceltable" >
+  <thead>
+    <tr>
+        <th (click)="sort('id')">DOCUMENT NO&nbsp;<i class="fa fa-sort"></i></th>
+        <th>DOCUMENT DATE</th>
+        <th>AGING</th>
+        <th>DOCUMENT TYPE</th>
+      <th>COMPANY CODE</th>
+      <th>DEBIT/CREDIT</th>
+      <th>CURRENCY</th>
+      <th>AMOUNT</th>
+      <th>PERIOD</th>
+      <th>BILLING DOCUMENT</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of inquirydat|filter:searchText|paginate:{itemsPerPage:10,currentPage:p}| orderBy:key:reverse">
+        <td>{{data.DOC_NO}}</td>
+        <td>{{data.DOC_DATE}}</td>
+        <td>{{data.CLR_DOC_NO}}</td>
+        <td>{{data.DOC_TYPE}}</td>
+      <td>{{data.COMP_CODE}}</td>
+      <td>{{data.DB_CR_IND}}</td>
+      <td>{{data.CURRENCY}}</td>
+      <td>{{data.AMOUNT}}</td>
+      <td>{{data.FIS_PERIOD}}</td>
+      <td>{{data.BILL_DOC}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h3 class="loader" style="text-align: center;" *ngIf="load">Loading...</h3>
+<pagination-controls (pageChange)="p=$event" style="text-align: center;"></pagination-controls>
+<div style="text-align: center;">
+  <button style="border-radius: 1rem;margin-left: 45px;
+  box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);" class="btn orangebutton" (click)="exportexcel()">Export to Excel</button>
+
+</div>

@@ -1,0 +1,222 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<h2 class="heading" style="margin-bottom: 0px;margin-top: 10px;margin-left: -13px;">FULL AND FINAL SETTLEMENT</h2>
+<mat-form-field  style="top: 167px;
+left: 205px;
+
+position: absolute;
+box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);
+width: 144px;
+height: 50px;" class="example-full-width" appearance="fill" >
+  <mat-label>Date</mat-label>
+  <input matInput [matDatepicker]="picker1" [(ngModel)]="fsdate">
+  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+  <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+  <button style="padding-left: 0px;
+  padding-right: 0px;
+  width: 118.9961px;
+  margin-left: 281px;
+    margin-bottom: -48px;
+    margin-top: 55px;
+
+  box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);left: 364px;
+    bottom: 32px;" class="btn orangebutton" (click)="getData()">Get</button>
+
+
+
+
+
+    <div class = "t col-md-10 tbox" style="top: 100px;border-radius: 1rem;
+		  box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);    padding-top: 10px;
+    padding-bottom: 10px;
+    left: 110px;">
+       <div class = "col-md mt-4 mb-4" style="height: 45px;">
+            <img src="../../assets/Kaar.png" style = "position: relative;
+            left: 10PX;
+            top: -8px;
+            width: 68px;"alt="Admin" class="rounded-circle" width="125">
+            <h2 style = "position: relative;
+            left: 184px;
+            top: -55px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K A A R &nbsp;&nbsp;&nbsp;&nbsp; T E C H N O L O G I E S
+                    &nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
+            
+            
+                   </h2>
+           
+  </div>  
+      
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col" class = "table-dark border-right">Employee ID:</th>
+       <th scope="col" class = "table-dark border-right">Employee Name:</th>
+       <th scope="col" class = "table-dark border-right">Date:</th>
+       <th scope="col" class = "table-dark border-right">Phone No:</th>
+     
+    </tr>
+  </thead>
+  <tbody class = "bg-secondary">
+    <tr>
+      <th class="font-weight-bold border-right border-dark">{{vendor_id}}</th>
+      <td class="font-weight-bold border-right border-dark">{{vendor_name}}</td>
+      <td class="font-weight-bold border-right border-dark">{{myDate| date}}</td>
+      <td class="font-weight-bold" >+91 {{vendor_phone}}</td>
+    </tr>   
+  </tbody>
+  
+  </table>
+
+
+  <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col" class = "table-dark border-right">Company:</th>
+           <th scope="col" class = "table-dark border-right">CCDESC:</th>
+         
+        </tr>
+      </thead>
+      <tbody class = "bg-secondary">
+        <tr>
+          <th class="font-weight-bold border-right border border-dark">{{products2.COMPANY}}</th>
+          <td class="font-weight-bold border-right border border-dark">{{products2.CCDESC}}</td>
+
+        </tr>   
+      </tbody>
+      
+      </table>
+
+
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col" class = "table-dark border-right">Approver:</th>
+         <th scope="col" class = "table-dark border-right">Department:</th>
+         <th scope="col" class = "table-dark border-right">Division:</th>
+         <th scope="col" class = "table-dark border-right">Job:</th>
+       
+      </tr>
+    </thead>
+    <tbody class = "bg-secondary">
+      <tr>
+        <th class="font-weight-bold border-right border-dark">{{products2.APPROVER}}</th>
+        <td class="font-weight-bold border-right border-dark">{{products2.DEPARTMENT}}</td>
+        <td class="font-weight-bold border-right border-dark">{{products2.DIVISION}}</td>
+        <td class="font-weight-bold" >{{products2.JOB}}</td>
+      </tr>   
+    </tbody>
+    
+    </table>
+  
+  
+
+
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+          <th scope="col" class = "table-dark border-right">Company Code:</th>
+        <th scope="col" class = "table-dark border-right">Cost Center:</th>
+         <th scope="col" class = "table-dark border-right">Currency:</th>
+         <th scope="col" class = "table-dark border-right">No Of Leaves:</th>
+         <th scope="col" class = "table-dark border-right">EOS:</th>
+       
+      </tr>
+    </thead>
+    <tbody class = "bg-secondary">
+      <tr>
+        <th class="font-weight-bold border-right border-dark">{{products2.COMPCODE}}</th>
+        <th class="font-weight-bold border-right border-dark">{{products2.COSTCENTER}}</th>
+        <td class="font-weight-bold border-right border-dark">{{products2.CURRENCY}}</td>
+        <td class="font-weight-bold border-right border-dark">{{products2.NUMOFLEAVES}}</td>
+        <td class="font-weight-bold border-right border-dark">{{eos}}</td>
+        
+      </tr>   
+    </tbody>
+    
+    </table>
+
+
+
+
+
+     <table class="table table-borderless"> 
+   <thead >
+    <tr class = "">
+      <th scope="col" class = "table-dark font-weight-light border-right">Payment1:</th>
+       <th scope="col" class = "table-dark font-weight-light border-right">Payment1:</th>
+       <th scope="col" class = "table-dark font-weight-light border-right">Payment1:</th>
+     
+    </tr>
+  </thead>
+  <tbody class = "border border-dark">
+    <tr>
+      <td class="">{{products2.AMOUNT1}}</td>
+      <td class="">{{products2.AMOUNT2}}</td>
+      <td class="" >{{products2.AMOUNT3}}</td>
+    </tr>
+       
+  </tbody>
+      </table>
+      <table class="table table-borderless">
+   <thead class = "">
+    <tr class = "">
+      <th scope="col" class = "table-dark font-weight-light border-right">Address:</th>
+       <th scope="col" class = "table-dark font-weight-light border-right">JOINING DATE:</th>
+       <th scope="col" class = "table-dark font-weight-light border-right">LEAVING DATE:</th>          
+    </tr>
+  </thead>  
+  <tbody class = "">
+    <tr>
+      <td class=" border-right border-dark bg-secondary">{{vendor_street}}, {{vendor_city}}-{{vendor_pincode}}</td>
+      <td class=" border border-dark">{{products2.JOINDATE}}</td>
+      <td class=" border border-dark">{{products2.LEAVEDATE}}</td>      
+    </tr>   
+  </tbody>   
+</table>
+
+<table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col" class = "table-dark border-right" style="width: 225px;">Additional Pay:</th>
+         <th scope="col" class = "table-dark border-right" style="width: 325px;">Gross Pay:</th>
+         <th scope="col" class = "table-dark border-right">Net Pay:</th>
+       
+       
+      </tr>
+    </thead>
+    <tbody class = "bg-secondary">
+      <tr>
+        <th class="font-weight-bold border-right border-dark">{{products2.ADDITIONALPAY}}</th>
+        <td class="font-weight-bold border-right border-dark">{{products2.GROSSPAY}}</td>
+        <td class="font-weight-bold border-right border-dark">{{products2.NETPAY}}</td>
+       
+      </tr>   
+    </tbody>
+    
+    </table>
+
+
+
+  <table class="table table-borderless">
+
+    
+   <thead class = "">
+    <tr class = "">
+      <th scope="col" class = ""></th>       
+       <th scope="col" class = "table-dark font-weight-light border-right" style="width: 20%;">TENURE PERIOD:</th> 
+      <th scope="col" class = "" style="width: 50%;">{{products2.TENUREPERIOD}}</th>
+    </tr>
+  </thead>
+      </table>
+</div>
+  <div class = "t col-md-1">    
+  </div>
+
+<br><br><br>
+<br><br><br><br>
+<br><br><br>
+<br><br><br><br>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>profile with data and skills - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    	body{
+    margin-top:20px;
+    color: #1a202c;
+    text-align: left;
+    background-color: #e2e8f0;    
+}
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: #e2e8f0;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+
+    </style>
+</head>
+<body>
+          
+           
+        
+  
+<div class="container" style="margin-top: 50px;">
+  
+    <div class="main-body">
+      
+       
+        <h1 class="content-center" style="color:{{hd_color}};">VENDOR DETAILS</h1>
+      
+          <div class="row gutters-sm">
+
+
+
+            
+            <div class="col-md-4 mb-3">
+              <div class="card" style="border-radius: 1rem;
+              box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);">
+                <div class="card-body" style="height: 302px;">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <div class="svg-circle">
+      
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" style = "position:relative; left:0.8px; top:-16px;"alt="Admin" class="rounded-circle" width="125">
+                      </div>
+                    <div class="mt-3">
+                        <h4 style="margin: 0 0 0;"> ID: {{vendor_id}}</h4>
+                        
+                       
+                          <mat-form-field class="col-12 p-0 float-left ">
+                        <h2 style="margin: 0 0 0;">
+                        <input [readonly]="isReadonly" class="content-center" matInput [(ngModel)]="vendor_name" value={{vendor_name}}>
+                      </h2>
+                      </mat-form-field>
+                        
+                          
+                          
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3" style="border-radius: 1rem;
+              box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);">
+                <div class="card-body" style="height: 302px;">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Street</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                            <input [readonly]="isReadonly" matInput placeholder="Ex. California" [(ngModel)]="vendor_street" value={{vendor_street}}>
+                        
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">City</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                            <input [readonly]="isReadonly" matInput placeholder="Ex. California" [(ngModel)]="vendor_city" value={{vendor_city}}>
+                        
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Postal Code</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input [readonly]="isReadonly" matInput placeholder="Ex. 4876" [(ngModel)]="vendor_pincode" value={{vendor_pincode}}>
+                        
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Country</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input [readonly]="isReadonly" matInput placeholder="Ex. CAL" [(ngModel)]="vendor_land" value={{vendor_land}}>
+                        
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input [readonly]="isReadonly" matInput placeholder="Ex. 8667xxxx54" [(ngModel)]="vendor_phone" value={{vendor_phone}} >
+                            
+                    </div>
+                  </div>
+                  <hr>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="neg-margin content-center">
+        <button style="border-radius: 1rem;
+        box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);" mat-raised-button color="primary" (click)="enableEdit()" style="background-color: {{btn_color}}">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {{btn_text}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+        </button>
+        <!-- <button class="ml-3 p-2">Update</button> -->
+        <br><br>
+
+    </div>
+    
+    
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+<br><br>
+</html>

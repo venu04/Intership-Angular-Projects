@@ -1,0 +1,50 @@
+<h2 style="margin-bottom: 0px;margin-top: 10px;margin-left: -13px;">LEAVE AVAILABILITY</h2>
+<mat-form-field>
+  <mat-label>Search</mat-label>
+  <input matInput [(ngModel)]="searchText" placeholder="Ex. ium" #input>
+</mat-form-field>
+<mat-form-field class="example-full-width" style="    position: absolute;left:964;margin-left: 707px;">
+  <mat-label>Email</mat-label>
+  <input type="email" matInput [(ngModel)]="userMail"  #ctrl="ngModel" placeholder="Ex. pat@example.com" >
+  
+  </mat-form-field>
+  <a (click)="sendmail()" class="fa fa-send fa-2x" style="position: relative;
+  left: 894px;
+  top: 6px;" ></a>
+
+<div>
+<table style="box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);" class="table table-bordered tbox" id="exceltable" >
+  <thead>
+    <tr>
+        <th (click)="sort('id')">LEAVE TYPE&nbsp;<i class="fa fa-sort"></i></th>
+        <th>BEGIN</th>
+        <th>END</th>
+      <th>NAME OF LEAVE TYPE</th>
+      <th>QUATANUM</th>
+      <th>TIME UNIT</th>
+      <th>UNIT TEXT</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of inquirydat|filter:searchText|paginate:{itemsPerPage:10,currentPage:p}| orderBy:key:reverse">
+        <td>{{data.LEAVETYPE}}</td>
+        <td>{{data.QUOTABEG}}</td>
+        <td>{{data.QUOTAEND}}</td>
+
+      <td>{{data.QUOTATEXT}}</td>
+      <TD>{{data.ENTITLE}}</TD>
+      <td>{{data.TIME_UNIT}}</td>
+      <td>{{data.TIUNITEXT}}</td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+<h3 class="loader" style="text-align: center;" *ngIf="load">Loading...</h3>
+<pagination-controls (pageChange)="p=$event" style="text-align: center;"></pagination-controls>
+<div style="text-align: center;">
+  <button style="border-radius: 1rem;margin-left: 45px;
+  box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);" class="btn orangebutton" (click)="exportexcel()">Export to Excel</button>
+
+</div>

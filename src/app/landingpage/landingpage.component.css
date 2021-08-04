@@ -1,0 +1,703 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header nav {
+  color: #000;
+}
+
+header nav a {
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+}
+
+header nav a:last-child {
+  color: #fff;
+  background: #ec171b;
+  padding: 10px 20px;
+  margin-left: 15px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+#container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 20px;
+  height: 575px;
+}
+
+#bg-container {
+  width: 55%;
+}
+
+#bg-container svg {
+  width: 95%;
+  height: 90%;
+  margin-left: 85px;
+}
+
+#content-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#content-container h1 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 0.9em;
+  margin-bottom: 30px;
+  color: #ec171b;
+}
+
+#content-container p {
+  font-weight: 500;
+  line-height: 1.8em;
+}
+
+#content-container button {
+  color: #fff;
+  background: #ec171b;
+  padding: 16px 0px;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  margin-top: 30px;
+  font-size: 16px;
+  width: 160px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#content-container button:hover {
+  opacity: 0.8;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-family: sans-serif;
+    background-color: #f1f1f1; 
+}
+
+.container {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card {
+    position: relative;
+    border-radius: 10px;
+}
+
+.container .card .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.7s;
+    z-index: 1;
+}
+
+.container .card:nth-child(1) .icon {
+    background: #e07768;
+}
+
+.container .card:nth-child(2) .icon {
+    background: #6eadd4;
+}
+
+.container .card:nth-child(3) .icon {
+    background: #4aada9;
+}
+
+
+.container .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fafafa;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+}
+
+.container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: #ff0057;
+    transform: translateY(0px);
+}
+
+.container .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.container .card .face.face1 .content i{
+    max-width: 100px;
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #414141;
+}
+
+.container .card .face.face2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    color: #414141;
+} 
+
+.container a {
+    text-decoration: none;
+    color: #414141;
+}
+
+.card1{
+    padding-top: 30px;
+    padding-left: 60px;
+}
+.imgw{
+    width:100px;
+}
+
+
+
+
+
+
+
+
+  /* GET IN TOUCH  Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #ec171b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 180px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+
+
+
+  
+.contact {
+  position: absolute;
+  
+  height: 250px;
+  width: 250px;
+  
+  border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+.contact .envelope {
+  position: absolute;
+  height: 93px;
+  width: 165px;
+  left: 50%;
+  margin-left: -83px;
+  top: 50%;
+  margin-top: -50px;
+  background: #F9F9F9;
+  
+  transition: margin-top 300ms;
+  -ms-transition: margin-top 300ms;
+  -moz-transition: margin-top 300ms;
+  -o-transition: margin-top 300ms;
+  -webkit-transition: margin-top 300ms;
+}
+.contact:hover .envelope {
+  transition-delay: 150ms;
+  -ms-transition-delay: 150ms;
+  -moz-transition-delay: 150ms;
+  -o-transition-delay: 150ms;
+  margin-top: -20px;
+}
+.contact .envelope .top {
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  width: 100%;
+  height: 73px;
+  z-index: 30;
+  overflow: hidden;
+                  
+  transform-origin: top;
+  -ms-transform-origin: top;
+  -moz-transform-origin: top;
+  -o-transform-origin: top;
+  -webkit-transform-origin: top;
+              
+  transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+  -ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+  -moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+  -o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+  -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+}
+.contact:hover .envelope .top {
+  transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  -ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  -o-transition: -o-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  -webkit-transition: -webkit-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  
+  height: 10px;
+  top: -60px;
+  
+  transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+}
+.contact .envelope .outer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-left: 83px solid transparent;
+  border-right: 82px solid transparent;
+  border-top: 70px solid #EEE;
+}
+.contact .envelope .outer .inner {
+  position: absolute;
+  left: -81px;
+  top: -73px;
+  border-left: 81px solid transparent;
+  border-right: 80px solid transparent;
+  border-top: 68px solid #333;
+}
+.contact .envelope .bottom {
+  position: absolute;
+  z-index: 20;
+  bottom: 0px;
+  left: 2px;
+  border-left: 81px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 45px solid #333;
+}
+.contact .envelope .left {
+  position: absolute;
+  z-index: 20; top: 0px;
+  left: 0px;
+  border-left: 81px solid #333;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
+}
+.contact .envelope .right {
+  position: absolute;
+  z-index: 20;
+  top: 0px;
+  right: 0px;
+  border-right: 80px solid #333;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
+}
+.contact .envelope .cover {
+  position: absolute;
+  z-index: 15;
+  bottom: 0px;
+  left: 0px;
+  height: 55%;
+  width: 100%;
+  background: #EEE;
+}
+.contact .envelope .paper {
+  position: absolute;
+  height: 83px;
+  padding-top: 10px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background: #F9F9F9;
+  z-index: 10;
+  transition: margin-top 300ms 0ms;
+  -ms-transition: margin-top 300ms 0ms;
+  -moz-transition: margin-top 300ms 0ms;
+  -o-transition: margin-top 300ms 0ms;
+  -webkit-transition: margin-top 300ms 0ms;
+}
+.contact:hover .envelope .paper {
+  margin-top: -60px;
+  transition: margin-top 300ms 150ms;
+  -ms-transition: margin-top 300ms 150ms;
+  -moz-transition: margin-top 300ms 150ms;
+  -o-transition: margin-top 300ms 150ms;
+  -webkit-transition: margin-top 300ms 150ms;
+}
+.contact .envelope .paper a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  margin: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+}
+.contact .envelope .paper a.call .i {
+  position: absolute;
+  top: 2px;
+  left: 20px;
+  display: inline-block;
+  width: 3px;
+  height: 5px;
+  border-width: 5px 0 5px 2px;
+  border-style: solid;
+  border-color: #555;
+  background: transparent;
+  
+  transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+
+  border-top-left-radius: 3px 5px;
+  border-bottom-left-radius: 3px 5px;
+  -moz-border-radius-topleft: 3px 5px;
+  -moz-border-radius-bottomleft: 3px 5px;
+  -webkit-border-top-left-radius: 3px 5px;
+  -webkit-border-bottom-left-radius: 3px 5px;
+                                                                                                                                          
+  transition: border-color 300ms;
+  -ms-transition: border-color 300ms;
+  -moz-transition: border-color 300ms;
+  -o-transition: border-color 300ms;
+  -webkit-transition: border-color 300ms;
+}
+.contact .envelope .paper a {
+  color: #333;
+
+  transition: color 200ms;
+  -ms-transition: color 200ms;
+  -moz-transition: color 200ms;
+  -o-transition: color 200ms;
+  -webkit-transition: color 200ms;
+}
+.contact .envelope .paper a:hover {
+  color: #EEE;
+}
+.contact .envelope .paper a.call:hover .i {
+  border-color: #DDD;
+}
+.contact .envelope .paper a.mail .i {
+  position: absolute;
+  top: 0px;
+  left: 17px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+}
+.orangebutton{
+  
+  color: white;
+  background: #ec171b;
+  border-radius: 40px;
+  outline: none;
+  margin-top: 30px;
+  font-size: 16px;
+  width: 160px;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #ec171b;
+  padding: 12px 20px;
+  border: none;
+  margin-left: 180px;
+}
+
+
+h1.ownheading{
+  color: #ec171b;
+  text-align: center;
+    font-family: Georgia, sans-serif;
+    font-size: 3em;
+    letter-spacing: -2px;
+}
+
+.contactForm{
+  width: 40%;
+  padding: 40px;
+  background:#fff;
+
+}
+.contactForm h2{
+  font-size: 30px;
+  color:#333;
+  font-weight: 500;
+}
+.contactForm .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin:10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span{
+
+ color: #e91e63;
+ font-size: 12px;
+ transform: translateY(-20px);
+}
+
+
+
+
+
+
+
+
+
+
+
+#mobile-display-carousel .mobile-display-carousel-indicators{
+  margin-top: 160%;
+  top: auto;
+  bottom: auto;
+}
+
+#mobile-display-carousel .mobile-border{
+  position: absolute;
+  z-index: 1;
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+  /* max-width: 494px; */
+}
+
+#mobile-display-carousel .carousel-inner{
+  
+  margin-top: 22%;
+  margin-left: 11%;
+  margin-right: 11%;
+  width: 78%;
+}
+
+
+
+
+
+
+
+
+
+ul{
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+li{
+	display: inline-block;
+	margin: 10px;
+}
+.download{
+	width: 200px;
+	height: 75px;
+	background: #000;
+	float: left;
+	border-radius: 4px;
+	position: relative;
+	color: #fff;
+	cursor: pointer;
+	border: 1px solid #fff;
+}
+.download .fa{
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+}
+.p1, .p2{
+	position: absolute;
+	left: 70px;
+}
+.p1{
+	top: 20px;
+	font-size: 12px;
+}
+.p2{
+	top: 35px;
+	font-size: 16px;
+}
+.download:hover{
+	filter: invert(100%);
+}

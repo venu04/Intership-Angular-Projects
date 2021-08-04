@@ -1,0 +1,124 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<br>
+
+
+<mat-form-field class="example-full-width" style="    position: absolute;left:964;margin-left: 705px;
+top: 76px;
+">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [(ngModel)]="userMail"  #ctrl="ngModel" placeholder="Ex. pat@example.com" >
+    
+    </mat-form-field>
+    <a (click)="sendmail()" class="fa fa-send fa-2x" style="position: relative;
+left: 894px;
+    top: 12px;" ></a>
+	<br><br>
+	<br>
+<div class="container bootstrap snippets bootdeys">
+<div class="row">
+  <div class="col-sm-12" style="padding-left: 123px;
+  PADDING-RIGHT: 163PX;">
+	  	<div class="panel panel-default invoice" id="invoice" >
+		  <div class="panel-body tbox" style="padding-left: 25px;
+          padding-right: 25px;
+		  padding-top: 25px;margin-left: 20px;
+		  border-radius: 1rem;
+		  box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0 / 90%);">
+		    <div class="row" style="height: 80px;">
+
+				<div class="col-sm-3 top-left">
+                        <img src="../../assets/Kaar.png" style = "position:relative; left:12px; top:-12px;width: 90px;"alt="Admin" class="rounded-circle" width="125">
+				</div>
+				<h2 style="margin-left: 35px;padding-top: 15px;color: #ec171b;">PURCHASE ORDER</h2>
+				<div class="col-sm-4 top-right" style="margin-left: 18px;">
+						<h3 class="marginright">PO NUMBER-{{PO_NUMBER}}</h3>
+						<span class="marginright">{{PRICE_DATE}}</span>
+			    </div>
+
+			</div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                            <p class="lead marginbottom payment-info">VENDOR</p>
+                        <span class="text-sm text-grey-m2 align-middle">To: </span>
+                        <span class="text-sm  align-middle" style="color: #007bff;">{{vendor_name}}</span>
+                    </div>
+                    <div class="text-grey-m2">
+                        <div class="my-1">
+                            {{vendor_street}}, 
+                        </div>
+                        <div class="my-1">
+                            {{vendor_city}}, {{vendor_land}}
+                        </div>
+                        <div class="my-1"><i class="fa fa-phone fa-flip-horizontal text-secondary"></i> <b class="text-600">+91 {{vendor_phone}}</b></div>
+                    </div>
+                </div>
+                <!-- /.col -->
+
+                <div class="text-95 col-sm-6 align-self-start d-sm-flex justify-content-end">
+                    <hr class="d-sm-none" />
+                    <div class="text-grey-m2">
+                        <div class="mt-1 mb-2 text-secondary-m1 text-600 text-125">
+                            <p class="lead marginbottom payment-info">SHIP TO</p>
+                        </div>
+
+                        <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">ID:</span> #{{PO_NUMBER}}</div>
+
+                        <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Date:</span> {{PRICE_DATE}}</div>
+
+                        <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Plant:</span> <span class="badge badge-warning badge-pill px-25">{{PLANT}}</span></div>
+                    </div>
+                </div>
+                <!-- /.col -->
+            </div>
+			
+			<div class="row table-row">
+				<table class="table table-striped">
+			      <thead>
+			        <tr>
+			          <th class="text-center" style="width:5%">#</th>
+			          <th style="width:8%;padding-left: 37px;">Material</th>
+					  <th class="text-right" style="width:13%">Short Text</th>
+					  <th class="text-right" style="width:12%">Unit</th>
+			          <th class="text-right" style="width:13%">Net Price</th>
+					  <th class="text-right" style="width:12%">Quantity</th>
+					  <th class="text-right" style="width:15%">Gross Value</th>
+			        </tr>
+			      </thead>
+			      <tbody >
+			        <tr *ngFor="let data of inquirydat1">
+			          <td class="text-center">{{data.tcount}}</td>
+			          <td style="padding-left: 50px;">{{data.MATERIAL}}</td>
+					  <td class="text-right" style="padding-right: 0px;">{{data.SHORT_TEXT}}</td>
+					  <td class="text-center" style="padding-right: 0px;
+					  padding-left: 58px;">{{data.UNIT}}</td>
+			          <td class="text-right">{{data.NET_PRICE}}</td>
+					  <td class="text-right">{{data.QUANTITY}}</td>
+					  <td class="text-right">{{data.GROS_VALUE}}</td>
+			        </tr>
+			        
+			       </tbody>
+			    </table>
+
+			</div>
+
+			<div class="row">
+			<div class="col-xs-6 margintop" style="padding-left: 17px;padding-top: 14px;">
+                <p class="lead marginbottom">THANK YOU!</p>
+                <button (click)="download()" class="btn btn-primary orangebutton downloadbutton"  style="background: #FFA700;"><i class="fa fa-download" aria-hidden="true"></i> Download PDF</button>
+				
+			</div>
+			<div class="col-xs-6 text-right pull-right invoice-total" style="width: 610px;">
+					  <p>Subtotal : {{GROS_VALUE}}</p>
+			          <p>Discount ({{0}}%) : 0 </p>
+			          <p>Total : {{GROS_VALUE}} </p>
+			</div>
+			</div>
+
+		  </div>
+		</div>
+	</div>
+</div>
+</div>
+<br><br>

@@ -1,0 +1,18 @@
+.dropdown .dropdown-menu a{color: #fff; text-decoration: none;}
+.dropdown .btn { color:#fff;}
+.dropdown .btn:hover {color:#000;}
+.dropdown .btn:active { color:#000;}
+.dropdown .btn:focus { color:#000;}
+.dropdown .a:hover {color:#000;}
+.dropdown .dropdown-menu a:hover{color: #000; text-decoration: none;}
+.dropdown-menu .dropdown-item {display: inline-block; width: 100%; padding: 10px 5px;}
+
+
+.loginstyle{
+    width: 146px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,168 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/Kaar.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <span style="color: #ec171b;"> Kaar</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <!--customer portal-->
+          <a class="nav-link" *ngIf="auth.loggedIn()" style="color: #ec171b;" routerLink="/homepage" routerLinkActive="active">PROFILE</a>
+          <!--vendor portal--> 
+          <a class="nav-link" *ngIf="auth.vloggedIn()" style="color: #ec171b;" routerLink="/vendorhomepage" routerLinkActive="active">PROFILE</a>
+          <!--employee portal-->
+          <a class="nav-link" *ngIf="auth.eloggedIn()" style="color: #ec171b;" routerLink="/emphomepage" routerLinkActive="active">PROFILE</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <!--login--> 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle loginstyle" style="width: 146px;color: #ec171b;" *ngIf="!auth.loggedIn()&&!auth.vloggedIn()&&!auth.eloggedIn()" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            login
+          </a>
+          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <a class="nav-link dropdown-item" *ngIf="!auth.loggedIn()&&!auth.vloggedIn()&&!auth.eloggedIn()" routerLink="/login" routerLinkActive="active">CustLogin</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link dropdown-item" *ngIf="!auth.loggedIn()&&!auth.vloggedIn()&&!auth.eloggedIn()" routerLink="/vendorlogin" routerLinkActive="active">VendLogin</a>
+            <div class="dropdown-divider"></div>
+            <a class="nav-link dropdown-item" *ngIf="!auth.loggedIn()&&!auth.vloggedIn()&&!auth.eloggedIn()" routerLink="/emplogin" routerLinkActive="active">EmpLogin</a>
+
+          </div>
+        </li>
+          
+          <!--customer portal--> 
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" *ngIf="auth.loggedIn()" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dashboard
+              </a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                  
+                <a class="dropdown-item" href="#" routerLink="/inquiry" routerLinkActive="active">Inquiry</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" routerLink="/saleorder" routerLinkActive="active">Sale Order</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" routerLink="/delivery" routerLinkActive="active">Delivery</a>
+              </div>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" *ngIf="auth.loggedIn()" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Financial Sheet
+                </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    
+                  <a class="dropdown-item" href="#" routerLink="/invoice" routerLinkActive="active">Invoice Details</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" routerLink="/payments" routerLinkActive="active">Payments Overdues</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" routerLink="/credit" routerLinkActive="active">Credit/Debit Memo</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" routerLink="/overallSales" routerLinkActive="active">Overall Sales</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" routerLink="/lstm" routerLinkActive="active">LSTM</a>
+                </div>
+              </li>
+
+          
+          <a class="nav-link" style="cursor:pointer;color: #ec171b;" *ngIf="auth.loggedIn()" (click)="auth.logoutUser()">Logout</a>       
+          
+          
+
+
+          <!--vendor portal--> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" *ngIf="auth.vloggedIn()" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dashboard
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                
+              <a class="dropdown-item" href="#" routerLink="/rfq" routerLinkActive="active">RFQ</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" routerLink="/pocreate" routerLinkActive="active">Create PO</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" routerLink="/purchaseOrderhead" routerLinkActive="active">Purchase Order</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" routerLink="/goodsreceipthead" routerLinkActive="active">Goods Receipt</a>
+            </div>
+          </li>
+
+
+
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" *ngIf="auth.vloggedIn()" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Financial Sheet
+              </a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                  
+                <a class="dropdown-item" href="#" routerLink="/vendorinvoicepdf" routerLinkActive="active">Invoice Details</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" routerLink="/vendorpayment" routerLinkActive="active">Payments Overdues</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" routerLink="/vendorcredit" routerLinkActive="active">Credit/Debit Memo</a>
+              </div>
+            </li>
+
+        
+        <a class="nav-link" style="cursor:pointer;color: #ec171b;" *ngIf="auth.vloggedIn()" (click)="auth.vlogoutUser()">Logout</a>       
+      
+      
+        <!--employee portal--> 
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" *ngIf="auth.eloggedIn()" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dashboard
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                
+              <a class="dropdown-item" href="#" routerLink="/empleavebalance" routerLinkActive="active">Leave Availability</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" routerLink="/empleavehistory" routerLinkActive="active">Leave History</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" routerLink="/empleaverequest" routerLinkActive="active">Leave Request</a>
+             
+            </div>
+          </li>
+
+
+
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" *ngIf="auth.eloggedIn()" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Financial Sheet
+              </a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                  
+                <a class="dropdown-item" href="#" routerLink="/emppayslip" routerLinkActive="active">Pay Slip</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" routerLink="/empfullsettlement" routerLinkActive="active">Full Settlement</a>
+                
+              </div>
+            </li>
+
+        
+        <a class="nav-link" style="cursor:pointer;color: #ec171b;" *ngIf="auth.eloggedIn()" (click)="auth.elogoutUser()">Logout</a>
+
+
+
+
+
+      
+      </ul>
+    </div>
+  </nav>   
+  
+
+  
+  
+
+
+  <div class="container">
+    <router-outlet></router-outlet>            
+  </div>

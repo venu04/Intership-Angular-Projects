@@ -1,0 +1,9 @@
+{
+    "/api/*" : {
+        "target": "YOUR BACKEND DATA API",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": { "^/api": "" }
+  }
+}
+
